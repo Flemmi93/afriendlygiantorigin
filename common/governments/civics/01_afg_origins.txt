@@ -1,0 +1,53 @@
+origin_friendly_giant = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+
+	potential = {
+		always = yes
+	}
+	initializers = { friendly_giant_init }
+	preferred_planet_class_neighbor = no
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_anglers
+				value = civic_corporate_anglers
+				value = civic_idyllic_bloom
+				value = civic_eager_explorers
+				value = civic_privatized_exploration
+				value = civic_machine_exploration_protocol
+				value = civic_hive_stargazers
+				value = civic_void_hive
+				value = civic_sovereign_guardianship
+				value = civic_machine_sovereign_guardianship
+				value = civic_hive_sovereign_guardianship
+				value = civic_corporate_sovereign_guardianship
+			}
+		}
+	}
+
+	random_weight = {
+		base = 100
+	}
+	description = "origin_tooltip_default_effects"
+
+	swap_type = {
+		description = "origin_tooltip_default_effects_lithoid"
+
+		trigger = {
+			OR = {
+				AND = {
+					is_scope_valid = no
+					local_human_species_class = LITHOID
+				}
+				AND = {
+					is_scope_valid = yes
+					is_lithoid_empire = yes
+				}
+			}
+		}
+	}
+
+	advanced_start = yes
+}

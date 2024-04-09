@@ -1,0 +1,192 @@
+namespace = afg_events
+
+country_event = {
+	id = afg_events.01
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_origin = origin_friendly_giant
+	}
+	immediate = {
+		every_planet_within_border = {
+			limit = {
+				has_planet_flag = friendly_giant_colony
+			}
+			set_owner = space_owner
+			save_event_target_as = friendly_giant_colony_target
+			create_colony = {
+				owner = owner
+				species = owner_main_species
+				ethos = owner
+			}
+			planet_event = { id = afg_events.02 }
+		}
+		capital_scope = {
+			add_deposit = d_city_ruins
+
+			while = {
+				count = 10
+				random_owned_pop = {
+					limit = { NOT = { has_trait = trait_zombie } }
+					resettle_pop = {
+						pop = THIS
+						planet = event_target:friendly_giant_colony_target
+					}
+				}
+			}
+			random_owned_pop = {
+				limit = { NOT = { has_trait = trait_zombie } }
+				resettle_pop = {
+					pop = THIS
+					planet = event_target:friendly_giant_colony_target
+				}
+			}
+			if = {
+				limit = { any_owned_pop = { has_trait = trait_zombie } }
+				random_owned_pop = {
+					limit = { has_trait = trait_zombie }
+					resettle_pop = {
+						pop = THIS
+						planet = event_target:friendly_giant_colony_target
+					}
+				}
+				event_target:friendly_giant_colony_target = {
+					random_owned_pop = {
+						limit = { NOT = { has_trait = trait_zombie } }
+						resettle_pop = {
+							pop = THIS
+							planet = event_target:friendly_giant_colony_target
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = afg_events.02
+	title = afg_events.02.name
+	desc = afg_events.02.desc
+	picture = GFX_evt_friendly_giant
+	is_triggered_only = yes
+	trigger = {
+		owner = { has_origin = origin_friendly_giant }
+		has_planet_flag = friendly_giant_colony
+	}
+	immediate = {
+		owner = { add_modifier = { modifier = afg_demotion days = 2 } }
+		if = {
+			limit = { has_building = building_colony_shelter }
+			remove_building = building_colony_shelter
+			add_building = building_capital
+			break = yes
+		}
+		if = {
+			limit = { has_building = building_deployment_post }
+			remove_building = building_deployment_post
+			add_building = building_machine_capital
+		}
+		owner = { country_event = { id = afg_events.03 } }
+	}
+	option = {
+		name = OK
+		hidden_effect = {
+			add_district = district_city
+			add_district = district_generator
+			add_district = district_mining
+			add_district = district_farming
+			add_district = district_farming
+		
+			owner.capital_scope = {
+				remove_district = district_city
+				remove_district = district_generator
+				remove_district = district_mining
+				remove_district = district_farming
+				remove_district = district_farming
+			}
+			#Special Moves
+			#Move City Districts
+
+			#Move Industry
+			if = {
+				limit = {
+					owner.capital_scope = {
+						num_districts = {
+							type = district_industrial
+							value > 2
+						}
+					}
+				}
+				add_district = district_industrial
+				while = {
+					count = 2
+					owner.capital_scope= {
+						random_owned_pop = {
+							limit = { NOT = { has_trait = trait_zombie } }
+							resettle_pop = {
+								pop = THIS
+								planet = event_target:friendly_giant_colony_target
+							}
+						}
+					}
+				}
+				owner.capital_scope = { remove_district = district_industrial }
+			}
+			#Move Generator
+
+			#Move Mining
+
+			#Move Farming
+
+			#Move Buildings
+			if = {
+				limit = { owner.capital_scope = { has_building = building_commercial_zone } }
+				owner.capital_scope = { remove_building = building_commercial_zone }
+				add_building = building_commercial_zone
+			}
+			if = {
+				limit = { NOT = { has_building = building_commercial_zone } }
+				add_district = district_city
+			}
+			if = {
+				limit = { owner.capital_scope = { has_building = building_precinct_house } }
+				add_building = building_precinct_house
+			}
+			if = {
+				limit = { owner.capital_scope = { num_buildings = { type = building_temple value > 1 } } }
+				owner.capital_scope = { remove_building = building_temple }
+				add_building = building_temple
+			}
+			if = {
+				limit = { owner.capital_scope = { has_building = building_clinic } }
+				add_building = building_clinic
+			}
+			if = {
+				limit = { owner.capital_scope = { has_building = building_spawning_pool } }
+				add_building = building_spawning_pool
+			}
+			if = {
+				limit = { owner.capital_scope = { has_building = building_robot_assembly_complex } }
+				add_building = building_robot_assembly_plant
+			}
+			if = {
+				limit = { owner.capital_scope = { has_building = building_machine_assembly_plant } }
+				add_building = building_machine_assembly_plant
+			}
+			if = {
+				limit = { owner.capital_scope = { has_building = building_robot_assembly_complex } }
+				add_building = building_robot_assembly_plant
+			}
+			if = {
+				limit = { owner.capital_scope = { has_building = building_machine_assembly_plant } }
+				add_building = building_machine_assembly_plant
+			}
+			if = {
+				limit = { owner.capital_scope = { has_building = building_drone_storage } }
+				add_building = building_drone_storage
+			}
+		}
+	}
+}

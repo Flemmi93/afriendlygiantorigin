@@ -1,0 +1,13 @@
+﻿l_english:
+#Origin
+ origin_friendly_giant: "A Friendly Giant"
+ origin_friendly_giant_desc: "After discovering a 2nd habitable world the people went crazy for it, wwasting away their homeworld in an atempt to settle this new paradise"
+ friendly_giant_init: "System of Giants"
+ friendly_giant_init_NAME: "System of Giants"
+
+#Events
+ afg_events.02.name: "A long missed Neighbor"
+ afg_events.02.desc: "In our solar system there is the moon §G[This.GetName]§! behind a gas giant. it was long hidden due to complex oribtal mechanics, now with interplanetary ships flying around we have spotted it and immediatly colonized this home away from home.\n\nLiving on §G[This.GetName]§! is easy and popular and vast amounts of our poeple have move permanently there."
+
+#Modifiers
+ afg_demotion: ""
