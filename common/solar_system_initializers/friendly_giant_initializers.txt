@@ -60,12 +60,8 @@ friendly_giant_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-		}
-
-		init_effect = {
 			generate_empire_home_planet = yes
 		}
-
 		change_orbit = @base_moon_distance
 
 		moon = {
@@ -151,6 +147,10 @@ friendly_giant_init = {
 			orbit_distance = 10
 			init_effect = {
 				prevent_anomaly = yes
+				while = {
+					count = 6
+					add_deposit = random_blocker
+				}
 			}
 			modifiers = none
 			flags = { friendly_giant_colony colony_event }

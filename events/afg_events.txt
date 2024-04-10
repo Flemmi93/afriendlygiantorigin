@@ -24,6 +24,7 @@ country_event = {
 		}
 		capital_scope = {
 			add_deposit = d_city_ruins
+			add_deposit = d_failing_infrastructure
 
 			while = {
 				count = 10
@@ -88,12 +89,28 @@ planet_event = {
 			remove_building = building_deployment_post
 			add_building = building_machine_capital
 		}
-		owner = { country_event = { id = afg_events.03 } }
+
 	}
 	option = {
 		name = OK
 		hidden_effect = {
-			add_district = district_city
+			if = {
+				limit = { owner = { is_machine_empire = yes } }
+				add_district = district_nexus
+			}
+			if = {
+				limit = { owner = { is_hive_empire = yes } }
+				add_district = district_hive
+			}
+			if  = {
+				limit = {
+					owner = {
+						is_hive_empire = no
+						is_machine_empire = no
+					}
+				}
+				add_district = district_city
+			}
 			add_district = district_generator
 			add_district = district_mining
 			add_district = district_farming
@@ -147,7 +164,13 @@ planet_event = {
 				add_building = building_commercial_zone
 			}
 			if = {
-				limit = { NOT = { has_building = building_commercial_zone } }
+				limit = {
+					NOR = {
+						has_building = building_commercial_zone
+						owner = { is_hive_empire = yes }
+						owner = { is_machine_empire = yes }
+					}
+				}
 				add_district = district_city
 			}
 			if = {
@@ -180,12 +203,19 @@ planet_event = {
 				add_building = building_robot_assembly_plant
 			}
 			if = {
-				limit = { owner.capital_scope = { has_building = building_machine_assembly_plant } }
+				limit = {
+					owner.capital_scope = { has_building = building_machine_assembly_plant }
+					NOT = { has_building= building_machine_assembly_plant }
+				}
 				add_building = building_machine_assembly_plant
 			}
 			if = {
 				limit = { owner.capital_scope = { has_building = building_drone_storage } }
 				add_building = building_drone_storage
+			}
+			if = {
+				limit = { owner.capital_scope = { has_building = building_organic_sanctuary } }
+				add_building = building_organic_sanctuary
 			}
 		}
 	}

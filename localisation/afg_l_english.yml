@@ -1,12 +1,13 @@
 ﻿l_english:
 #Origin
  origin_friendly_giant: "A Friendly Giant"
- origin_friendly_giant_desc: "After discovering a 2nd habitable world the people went crazy for it, wwasting away their homeworld in an atempt to settle this new paradise"
+ origin_friendly_giant_desc: "After discovering a second habitable world the people went crazy for it, spending their homeworld in an atempt to settle this new paradise. Despite the relentless pursuit to colonize this §GFriendly Giant§! the Homeworld was not devastated as much as feared by some pesimists."
  friendly_giant_init: "System of Giants"
  friendly_giant_init_NAME: "System of Giants"
+ origin_tooltip_friendly_giant_effects: "- $INITIAL_POPS$ §G+1§!$NEW_LINE$- $HOMEWORLD$$TABBED_NEW_LINE$ - reduced in £planetsize£Size$TABBED_NEW_LINE$- §Y10§! £pops£Pops, §Y~5§! £district£Districts and §Y1-2§! £building£Buildings moved to an in system colony$NEW_LINE$Both Planets have additional £blocker£Blockers$NEW_LINE$- The Friendly Giant$TABBED_NEW_LINE$ - Is a £planetsize£very large developed colony within your home system$NEW_LINE$§RNo guranteed habitable worlds§!$NEW_LINE$§GInitial increased $MOD_POP_GROWTH_SPEED$§!"
 
 #Events
- afg_events.02.name: "A long missed Neighbor"
+ afg_events.02.name: "$origin_friendly_giant$"
  afg_events.02.desc: "In our solar system there is the moon §G[This.GetName]§! behind a gas giant. it was long hidden due to complex oribtal mechanics, now with interplanetary ships flying around we have spotted it and immediatly colonized this home away from home.\n\nLiving on §G[This.GetName]§! is easy and popular and vast amounts of our poeple have move permanently there."
 
 #Modifiers
