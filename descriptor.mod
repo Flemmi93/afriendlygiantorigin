@@ -5,3 +5,4 @@ tags={
 }
 name="Friendly Giant"
 supported_version="3.11.2"
+picture=thumbnail.png
