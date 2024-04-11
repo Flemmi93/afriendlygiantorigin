@@ -1,8 +1,9 @@
 version="1"
 tags={
-	"Events"
 	"Galaxy Generation"
+	"Events"
 }
-name="Friendly Giant"
-supported_version="3.11.2"
-picture=thumbnail.png
+name="Friendly Giant Origin"
+picture="thumbnail.png"
+supported_version="3.11.*"
+remote_file_id="3218622329"

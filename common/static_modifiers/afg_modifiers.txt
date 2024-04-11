@@ -1,3 +1,7 @@
 afg_demotion = {
 	pop_demotion_time_mult = -10.0
 }
+
+afg_happiness = {
+	pop_citizen_happiness = 0.1
+}

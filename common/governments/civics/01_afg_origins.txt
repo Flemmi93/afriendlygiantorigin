@@ -23,6 +23,10 @@ origin_friendly_giant = {
 				value = civic_machine_sovereign_guardianship
 				value = civic_hive_sovereign_guardianship
 				value = civic_corporate_sovereign_guardianship
+				value = civic_friendly_giant
+				value = civic_corpo_friendly_giant
+				value = civic_machine_friendly_giant
+				value = civic_hive_friendly_giant
 			}
 		}
 	}
@@ -31,4 +35,249 @@ origin_friendly_giant = {
 		base = 100
 	}
 	description = "origin_tooltip_friendly_giant_effects"
+}
+civic_friendly_giant = {
+	modification = {
+		add = {
+			count_controlled_planet = {
+				count > 3
+				limit = { is_colony = yes }
+			}
+		}
+		remove = {
+			count_controlled_planet = {
+				count > 3
+				limit = { is_colony = yes }
+			}
+		}
+	}
+	pickable_at_start = yes
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	initializers = { friendly_giant_init_civic }
+	preferred_planet_class_neighbor = no
+	alternate_civic_version = civic_machine_friendly_giant
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_idyllic_bloom
+				value = civic_eager_explorers
+				value = civic_sovereign_guardianship
+			}
+		}
+		origin = {
+			NOR = {
+				value = origin_friendly_giant
+				value = origin_common_ground
+				value = origin_hegemon
+				value = origin_scion
+				value = origin_shattered_ring
+				value = origin_void_dwellers
+				value = origin_necrophage
+				value = origin_ocean_paradise
+				value = origin_toxic_knights
+				value = origin_broken_shackles
+				value = origin_payback
+				value = origin_fear_of_the_dark
+				value = origin_riftworld
+				value = origin_lost_colony
+				value = origin_life_seeded
+				value = origin_doomsday
+			}
+		}
+	}
+
+	modifier = {
+		ship_colonizer_cost_mult = -0.25
+		country_starbase_influence_cost_mult = -0.1
+	}
+	hide_modifiers = yes
+	random_weight = {
+		base = 100
+	}
+	description = "civic_tooltip_friendly_giant_effects"
+}
+civic_machine_friendly_giant = {
+	modification = {
+		add = {
+			count_controlled_planet = {
+				count > 3
+				limit = { is_colony = yes }
+			}
+		}
+		remove = {
+			count_controlled_planet = {
+				count > 3
+				limit = { is_colony = yes }
+			}
+		}
+	}
+	pickable_at_start = yes
+	potential = { authority = { value = auth_machine_intelligence } }
+	initializers = { friendly_giant_init_civic }
+	preferred_planet_class_neighbor = no
+	alternate_civic_version = civic_friendly_giant
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_machine_exploration_protocol
+				value = civic_machine_sovereign_guardianship
+			}
+		}
+		origin = {
+			NOR = {
+				value = origin_friendly_giant
+				value = origin_common_ground
+				value = origin_hegemon
+				value = origin_scion
+				value = origin_shattered_ring
+				value = origin_void_dwellers
+				value = origin_necrophage
+				value = origin_ocean_paradise
+				value = origin_toxic_knights
+				value = origin_broken_shackles
+				value = origin_payback
+				value = origin_fear_of_the_dark
+				value = origin_riftworld
+				value = origin_machine
+				value = origin_lost_colony
+				value = origin_doomsday
+			}
+		}
+	}
+
+	modifier = {
+		ship_colonizer_cost_mult = -0.25
+		country_starbase_influence_cost_mult = -0.1
+	}
+	hide_modifiers = yes
+	random_weight = {
+		base = 100
+	}
+	description = "civic_tooltip_friendly_giant_effects"
+}
+civic_corpo_friendly_giant = {
+	modification = {
+		add = {
+			count_controlled_planet = {
+				count > 3
+				limit = { is_colony = yes }
+			}
+		}
+		remove = {
+			count_controlled_planet = {
+				count > 3
+				limit = { is_colony = yes }
+			}
+		}
+	}
+	pickable_at_start = yes
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	initializers = { friendly_giant_init_civic }
+	preferred_planet_class_neighbor = no
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_privatized_exploration
+				value = civic_corporate_sovereign_guardianship
+				value = civic_private_prospectors
+			}
+		}
+		origin = {
+			NOR = {
+				value = origin_friendly_giant
+				value = origin_common_ground
+				value = origin_hegemon
+				value = origin_scion
+				value = origin_shattered_ring
+				value = origin_void_dwellers
+				value = origin_necrophage
+				value = origin_ocean_paradise
+				value = origin_toxic_knights
+				value = origin_broken_shackles
+				value = origin_payback
+				value = origin_fear_of_the_dark
+				value = origin_riftworld
+				value = origin_lost_colony
+				value = origin_life_seeded
+				value = origin_doomsday
+			}
+		}
+	}
+
+	modifier = {
+		ship_colonizer_cost_mult = -0.25
+		country_starbase_influence_cost_mult = -0.1
+	}
+	hide_modifiers = yes
+	random_weight = {
+		base = 100
+	}
+	description = "civic_tooltip_friendly_giant_effects"
+}
+civic_hive_friendly_giant = {
+	modification = {
+		add = {
+			count_controlled_planet = {
+				count > 3
+				limit = { is_colony = yes }
+			}
+		}
+		remove = {
+			count_controlled_planet = {
+				count > 3
+				limit = { is_colony = yes }
+			}
+		}
+	}
+	pickable_at_start = yes
+	potential = { authority = { value = auth_hive_mind } }
+	initializers = { friendly_giant_init_civic }
+	preferred_planet_class_neighbor = no
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_hive_stargazers
+				value = civic_void_hive
+				value = civic_hive_sovereign_guardianship
+			}
+		}
+		origin = {
+			NOR = {
+				value = origin_friendly_giant
+				value = origin_common_ground
+				value = origin_hegemon
+				value = origin_scion
+				value = origin_shattered_ring
+				value = origin_void_dwellers
+				value = origin_necrophage
+				value = origin_ocean_paradise
+				value = origin_toxic_knights
+				value = origin_broken_shackles
+				value = origin_payback
+				value = origin_fear_of_the_dark
+				value = origin_riftworld
+				value = origin_lost_colony
+				value = origin_life_seeded
+				value = origin_doomsday
+			}
+		}
+	}
+
+	modifier = {
+		ship_colonizer_cost_mult = -0.25
+		country_starbase_influence_cost_mult = -0.1
+	}
+	hide_modifiers = yes
+	random_weight = {
+		base = 100
+	}
+	description = "civic_tooltip_friendly_giant_effects"
 }

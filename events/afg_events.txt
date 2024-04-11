@@ -220,3 +220,102 @@ planet_event = {
 		}
 	}
 }
+
+country_event = {
+	id = afg_events.03
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {	
+		remove_modifier = afg_happiness
+		add_modifier = {
+			modifier = afg_happiness
+			days = 1800
+		}
+	}
+}
+country_event = {
+	id = afg_events.04
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			has_civic = civic_friendly_giant
+			has_civic = civic_machine_friendly_giant
+			has_civic = civic_corpo_friendly_giant
+			has_civic = civic_hive_friendly_giant
+		}
+	}
+	immediate = {
+		capital_scope.solar_system = {
+			closest_system = {
+				limit = { has_star_flag = neighbor_t1_first_colony }
+				max_steps = 3
+				random_system_planet = {
+					limit = {
+						is_colonizable = yes
+						is_colony = no
+						has_planet_flag = prescripted_ideal
+					}
+					change_pc = pc_barren
+				}
+			}
+			closest_system = {
+				limit = { has_star_flag = neighbor_t2_second_colony }
+				max_steps = 6
+				random_system_planet = {
+					limit = {
+						is_colonizable = yes
+						is_colony = no
+						has_planet_flag = prescripted_ideal
+					}
+					change_pc = pc_barren
+				}
+			}
+		}
+		home_planet = {
+			change_planet_size = -4
+			add_deposit = random_blocker
+			add_deposit = random_blocker
+		}
+		random_planet_within_border = {
+			limit = {
+				is_planet_class = pc_gas_giant
+				num_moons > 0
+			}
+			weights = {
+				base = 1
+				modifier = {
+					add = 10
+					num_moons > 1
+				}
+			}
+			weights = {
+				base = 1
+				modifier = {
+					add = 10
+					num_moons > 2
+				}
+			}
+			weights = {
+				base = 1
+				modifier = {
+					add = 20
+					num_moons > 3
+				}
+			}
+			random_moon = {
+				set_planet_size = 28
+				change_pc = space_owner.owner_species
+				reset_planet = yes
+				while = {
+				count = 10
+					add_deposit = random_blocker
+					add_deposit = random
+				}
+			}
+		}
+
+	}
+}

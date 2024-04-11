@@ -2,5 +2,6 @@
 on_game_start_country = {
 	events = {
 		afg_events.01
+		afg_events.04
 	}
 }
