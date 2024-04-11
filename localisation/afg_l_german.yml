@@ -1,10 +1,35 @@
 ﻿l_german:
 #Origin
- origin_friendly_giant: "Ein Freundlicher Riese"
+ origin_friendly_giant: "A Friendly Giant"
  origin_friendly_giant_desc: "After discovering a second habitable world the people went crazy for it, spending their homeworld in an atempt to settle this new paradise. Despite the relentless pursuit to colonize this §GFriendly Giant§! the Homeworld was not devastated as much as feared by some pesimists."
  friendly_giant_init: "System of Giants"
  friendly_giant_init_NAME: "System of Giants"
+ friendly_giant_init_DESC: "$origin_tooltip_friendly_giant_effects$"
  origin_tooltip_friendly_giant_effects: "- $INITIAL_POPS$ §G+1§!$NEW_LINE$- $HOMEWORLD$$TABBED_NEW_LINE$ - reduced in £planetsize£Size$TABBED_NEW_LINE$- §Y10§! £pops£Pops, §Y~5§! £district£Districts and §Y1-2§! £building£Buildings moved to an in system colony$NEW_LINE$Both Planets have additional £blocker£Blockers$NEW_LINE$- The Friendly Giant$TABBED_NEW_LINE$ - Is a £planetsize£very large developed colony within your home system$NEW_LINE$§RNo guranteed habitable worlds§!$NEW_LINE$§GInitial increased $MOD_POP_GROWTH_SPEED$§!"
+ friendly_giant_init_civic: "$friendly_giant_init$"
+ friendly_giant_init_civic_NAME: "$friendly_giant_init_NAME$"
+ friendly_giant_init_civic_DESC: "$origin_tooltip_friendly_giant_effects$"
+
+#Civic
+ civic_friendly_giant: "$origin_friendly_giant$"
+ civic_friendly_giant_desc: "$origin_friendly_giant$"
+ civic_corpo_friendly_giant: "Huge Investment Opportunity"
+ civic_corpo_friendly_giant_desc: "Huge Investment Opportunity"
+ civic_machine_friendly_giant: "Huge External Expansion"
+ civic_machine_friendly_giant_desc: "Huge External Expansion"
+ civic_hive_friendly_giant: "$origin_friendly_giant$"
+ civic_hive_friendly_giant_desc: "$origin_friendly_giant$"
+ #2nd stage (removeable)
+ civic_friendly_giant2: "$civic_friendly_giant$"
+ civic_friendly_giant2_desc: "$civic_friendly_giant_desc$"
+ civic_corpo_friendly_giant2: "$civic_friendly_giant$"
+ civic_corpo_friendly_giant2_desc: "$civic_corpo_friendly_giant_desc$"
+ civic_machine_friendly_giant2: "$civic_machine_friendly_giant$"
+ civic_machine_friendly_giant2_desc: "$civic_machine_friendly_giant_desc$"
+ civic_hive_friendly_giant2: "$civic_hive_friendly_giant$"
+ civic_hive_friendly_giant2_desc: "$civic_hive_friendly_giant2_desc$"
+ #effect
+ civic_tooltip_friendly_giant_effects: "§GCan be removed after §Ythird§G colony§W$NEW_LINE$Bonuses:$TABBED_NEW_LINE$- £happiness£ $MOD_POP_HAPPINESS$: §G+10%§W for £time£§G5§W Years after every colonization$TABBED_NEW_LINE$- £colony_ship£ Colony Ship costs reduced by §G-25%§W$TABBED_NEW_LINE$- £influence£ Influence cost for Outposts reduced by §G-10%§W"
 
 #Events
  afg_events.02.name: "$origin_friendly_giant$"
@@ -12,3 +37,5 @@
 
 #Modifiers
  afg_demotion: ""
+ afg_happiness: "$colonization_fever$"
+ afg_happiness_desc: "$colonization_fever_desc$"
