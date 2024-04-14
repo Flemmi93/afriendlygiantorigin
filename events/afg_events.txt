@@ -223,19 +223,28 @@ planet_event = {
 	}
 }
 
-country_event = {
+planet_event = {
 	id = afg_events.03
 	hide_window = yes
 	is_triggered_only = yes
-
+	trigger = {
+		owner = {
+			OR = {
+				has_civic = civic_friendly_giant
+				has_civic = civic_machine_friendly_giant
+				has_civic = civic_corpo_friendly_giant
+				has_civic = civic_hive_friendly_giant
+			}
+		}
+	}
 	immediate = {	
-		remove_modifier = afg_happiness
-		add_modifier = {
-			modifier = afg_happiness
-			days = 1800
+		owner = {
+			remove_modifier = afg_happiness
+			add_modifier = { modifier = afg_happiness	days = 1800	}
 		}
 	}
 }
+
 country_event = {
 	id = afg_events.04
 	hide_window = yes

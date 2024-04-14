@@ -39,10 +39,7 @@ origin_friendly_giant = {
 civic_friendly_giant = {
 	modification = {
 		add = {
-			count_controlled_planet = {
-				count > 3
-				limit = { is_colony = yes }
-			}
+			always = no
 		}
 		remove = {
 			count_controlled_planet = {
@@ -57,7 +54,7 @@ civic_friendly_giant = {
 		authority = { NOT = { value = auth_corporate } }
 	}
 	initializers = { friendly_giant_init_civic }
-	preferred_planet_class_neighbor = no
+	non_colonizable_planet_class_neighbor = yes
 	alternate_civic_version = civic_machine_friendly_giant
 	possible = {
 		civics = {
@@ -102,10 +99,7 @@ civic_friendly_giant = {
 civic_machine_friendly_giant = {
 	modification = {
 		add = {
-			count_controlled_planet = {
-				count > 3
-				limit = { is_colony = yes }
-			}
+			always = no
 		}
 		remove = {
 			count_controlled_planet = {
@@ -117,7 +111,7 @@ civic_machine_friendly_giant = {
 	pickable_at_start = yes
 	potential = { authority = { value = auth_machine_intelligence } }
 	initializers = { friendly_giant_init_civic }
-	preferred_planet_class_neighbor = no
+	non_colonizable_planet_class_neighbor = yes
 	alternate_civic_version = civic_friendly_giant
 	possible = {
 		civics = {
@@ -162,10 +156,7 @@ civic_machine_friendly_giant = {
 civic_corpo_friendly_giant = {
 	modification = {
 		add = {
-			count_controlled_planet = {
-				count > 3
-				limit = { is_colony = yes }
-			}
+			always = no
 		}
 		remove = {
 			count_controlled_planet = {
@@ -182,7 +173,7 @@ civic_corpo_friendly_giant = {
 		}
 	}
 	initializers = { friendly_giant_init_civic }
-	preferred_planet_class_neighbor = no
+	non_colonizable_planet_class_neighbor = yes
 	possible = {
 		civics = {
 			NOR = {
@@ -227,10 +218,7 @@ civic_corpo_friendly_giant = {
 civic_hive_friendly_giant = {
 	modification = {
 		add = {
-			count_controlled_planet = {
-				count > 3
-				limit = { is_colony = yes }
-			}
+			always = no
 		}
 		remove = {
 			count_controlled_planet = {
@@ -242,7 +230,7 @@ civic_hive_friendly_giant = {
 	pickable_at_start = yes
 	potential = { authority = { value = auth_hive_mind } }
 	initializers = { friendly_giant_init_civic }
-	preferred_planet_class_neighbor = no
+	non_colonizable_planet_class_neighbor = yes
 	possible = {
 		civics = {
 			NOR = {

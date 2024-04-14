@@ -5,3 +5,10 @@ on_game_start_country = {
 		afg_events.04
 	}
 }
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+	events = {
+		afg_events.03
+	}
+}
