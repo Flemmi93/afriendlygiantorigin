@@ -7,7 +7,7 @@ origin_friendly_giant = {
 		always = yes
 	}
 	initializers = { friendly_giant_init }
-	preferred_planet_class_neighbor = no
+	non_colonizable_planet_class_neighbor = yes
 	possible = {
 		civics = {
 			NOR = {
@@ -23,10 +23,10 @@ origin_friendly_giant = {
 				value = civic_machine_sovereign_guardianship
 				value = civic_hive_sovereign_guardianship
 				value = civic_corporate_sovereign_guardianship
-				value = civic_friendly_giant
-				value = civic_corpo_friendly_giant
-				value = civic_machine_friendly_giant
-				value = civic_hive_friendly_giant
+			#	value = civic_friendly_giant
+			#	value = civic_corpo_friendly_giant
+			#	value = civic_machine_friendly_giant
+			#	value = civic_hive_friendly_giant
 			}
 		}
 	}
@@ -69,7 +69,7 @@ civic_friendly_giant = {
 		}
 		origin = {
 			NOR = {
-				value = origin_friendly_giant
+			#	value = origin_friendly_giant
 				value = origin_common_ground
 				value = origin_hegemon
 				value = origin_scion
@@ -128,7 +128,7 @@ civic_machine_friendly_giant = {
 		}
 		origin = {
 			NOR = {
-				value = origin_friendly_giant
+			#	value = origin_friendly_giant
 				value = origin_common_ground
 				value = origin_hegemon
 				value = origin_scion
@@ -157,6 +157,7 @@ civic_machine_friendly_giant = {
 		base = 100
 	}
 	description = "civic_tooltip_friendly_giant_effects"
+
 }
 civic_corpo_friendly_giant = {
 	modification = {
@@ -192,7 +193,7 @@ civic_corpo_friendly_giant = {
 		}
 		origin = {
 			NOR = {
-				value = origin_friendly_giant
+			#	value = origin_friendly_giant
 				value = origin_common_ground
 				value = origin_hegemon
 				value = origin_scion
@@ -221,6 +222,7 @@ civic_corpo_friendly_giant = {
 		base = 100
 	}
 	description = "civic_tooltip_friendly_giant_effects"
+
 }
 civic_hive_friendly_giant = {
 	modification = {
@@ -251,7 +253,7 @@ civic_hive_friendly_giant = {
 		}
 		origin = {
 			NOR = {
-				value = origin_friendly_giant
+			#	value = origin_friendly_giant
 				value = origin_common_ground
 				value = origin_hegemon
 				value = origin_scion
@@ -280,4 +282,5 @@ civic_hive_friendly_giant = {
 		base = 100
 	}
 	description = "civic_tooltip_friendly_giant_effects"
+
 }

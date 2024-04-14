@@ -6,11 +6,13 @@
 
 @distance = 100
 @jumps = 3
-@planet_min_size = 40
-@planet_max_size = 55
+@moon_min_size = 15
+@moon_max_size = 20
+@planet_min_size = 35
+@planet_max_size = 50
+@gasgiant_min_size = 60
+@gasgiant_max_size = 65
 @base_moon_distance = 15
-@moon_min_size = 20
-@moon_max_size = 30
 
 ### STARTING SYSTEMS
 
@@ -19,7 +21,7 @@ friendly_giant_init = {
 	class = "rl_starting_stars"
 	asteroid_belt = {
 		type = rocky_asteroid_belt
-		radius = 115
+		radius = 175
 	}
 
 	usage = origin
@@ -42,11 +44,32 @@ friendly_giant_init = {
 		class = star
 		orbit_distance = 0
 		orbit_angle = 1
-		size = { min = 40 max = 60 }
+		size = { min = 75 max = 80 }
 		has_ring = no
 	}
 
-	change_orbit = 100
+	change_orbit = 175 
+	planet = {
+		count = { min = 3 max = 8 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+	change_orbit = -175
+
+
+	change_orbit = 50
+
+	planet = {
+		count = { min = 1 max = 3 }
+		orbit_distance = 15
+		class = random_non_colonizable
+		orbit_angle = { min = 90 max = 270 }
+		change_orbit = @base_moon_distance
+		size = { min = @planet_min_size max = @planet_max_size }
+	}
+
+	change_orbit = 30
 
 	planet = {
 		count = 1
@@ -63,82 +86,37 @@ friendly_giant_init = {
 			generate_empire_home_planet = yes
 		}
 		change_orbit = @base_moon_distance
-
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
 	}
+
+	change_orbit = @distance
 
 	planet = {
 		count = { min = 0 max = 2 }
-		orbit_distance = 20
+		orbit_distance = 30
 		class = random_non_colonizable
 		orbit_angle = { min = 90 max = 270 }
 		change_orbit = @base_moon_distance
-
+		size = { min = @planet_min_size max = @planet_max_size }
 		moon = {
 			count = { min = 0 max = 1 }
 			class = random_non_colonizable
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
-		}
-	}
-
-	change_orbit = 50
-
-	planet = {
-		count = { min = 2 max = 3 }
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = { min = 40 max = 110 }
-	}
-
-	planet = {
-		count = { min = 2 max = 4 }
-		orbit_distance = 25
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
-
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = { min = 0 max = 1 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
-
-	planet = {
-		count = { min = 0 max = 1 }
-		orbit_distance = 20
-		class = pc_gas_giant
-		orbit_angle = { min = 90 max = 270 }
-		size = { min = 45 max = 55 }
-		change_orbit = @base_moon_distance
-
-		moon = {
-			count = { min = 0 max = 3 }
-			class = random_non_colonizable
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
+			size = { min = @moon_min_size max = @moon_max_size }
 		}
 	}
 	
-	change_orbit = 25
+	change_orbit = @distance
 
-	planet = { #gasriese
+	planet = {
 		count = 1
-		orbit_distance = 40
+		orbit_distance = 0
 		class = pc_gas_giant
 		orbit_angle = 180
 		size = 55
 		has_ring = no
 		change_orbit = @base_moon_distance
-
+		size = { min = @gasgiant_min_size max = @gasgiant_max_size }
 		moon = {
 			count = 1
 			class = ideal_planet_class
@@ -150,6 +128,7 @@ friendly_giant_init = {
 				while = {
 					count = 6
 					add_deposit = random_blocker
+					add_deposit = random
 				}
 			}
 			modifiers = none
@@ -161,13 +140,17 @@ friendly_giant_init = {
 			class = random_non_colonizable
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 10
+			size = { min = @moon_min_size max = @moon_max_size }
 		}
 	}
-
-	planet = {
-		count = { min = 0 max = 2 }
-		orbit_distance = 40
-		class = random_non_colonizable
-		orbit_angle = { min = 90 max = 270 }
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 2 }
+		hyperlane_jumps = { min = 1 max = @jumps }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		trigger = { num_guaranteed_colonies >= 1 }
+		hyperlane_jumps = { min = 1 max = @jumps }
+		initializer = "neighbor_t1_first_colony"
 	}
 }

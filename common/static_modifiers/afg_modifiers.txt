@@ -5,3 +5,11 @@ afg_demotion = {
 afg_happiness = {
 	pop_citizen_happiness = 0.1
 }
+
+afg_colonization_fever = {
+	colony_start_num_pops_add = 1
+	planet_colony_development_speed_mult = 0.2
+	category_new_worlds_research_speed_mult = 0.25
+	category_biology_research_speed_mult = 0.25
+	pop_growth_from_immigration = 0.5
+}
