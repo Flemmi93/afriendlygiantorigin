@@ -5,7 +5,7 @@
  friendly_giant_init: "System of Giants"
  friendly_giant_init_NAME: "System of Giants"
  friendly_giant_init_DESC: "$origin_tooltip_friendly_giant_effects$"
- origin_tooltip_friendly_giant_effects: "- $INITIAL_POPS$ §G+1§!$NEW_LINE$- $HOMEWORLD$$TABBED_NEW_LINE$ - reduced in £planetsize£Size$TABBED_NEW_LINE$- §Y10§! £pops£Pops, §Y~5§! £district£Districts and §Y1-2§! £building£Buildings moved to an in system colony$NEW_LINE$Both Planets have additional £blocker£Blockers$NEW_LINE$- The Friendly Giant$TABBED_NEW_LINE$ - Is a £planetsize£very large developed colony within your home system$NEW_LINE$§RNo guranteed habitable worlds§!$NEW_LINE$§GInitial increased $MOD_POP_GROWTH_SPEED$§!$NEW_LINE$§G£time£ 30 Year bonus with $civic_friendly_giant$ Civic.§!$TABBED_NEW_LINE$§RTaking Both Civic and Origin is a risky combo, since you wont have guranteed colonies around you.§!"
+ origin_tooltip_friendly_giant_effects: "- $INITIAL_POPS$ §G+1§!$NEW_LINE$- $HOMEWORLD$$TABBED_NEW_LINE$ - reduced in £planetsize£Size$TABBED_NEW_LINE$- §Y10§! £pops£Pops, §Y~5§! £district£Districts and §Y1-2§! £building£Buildings moved to an in system colony$NEW_LINE$Both Planets have additional £blocker£Blockers$NEW_LINE$- The Friendly Giant$TABBED_NEW_LINE$ - Is a £planetsize£very large developed colony within your home system$NEW_LINE$§RNo guranteed habitable worlds§!$NEW_LINE$§GInitial increased $MOD_POP_GROWTH_SPEED$§!$NEW_LINE$§G£time£ 30 Year bonus with $civic_friendly_giant$ Civic.§!$NEW_LINE$§RTaking Both Civic and Origin is a risky combo, since you wont have guranteed colonies around you.§!"
  friendly_giant_init_civic: "$friendly_giant_init$"
  friendly_giant_init_civic_NAME: "$friendly_giant_init_NAME$"
  friendly_giant_init_civic_DESC: "$origin_tooltip_friendly_giant_effects$"
@@ -29,7 +29,7 @@
  civic_hive_friendly_giant2: "$civic_hive_friendly_giant$"
  civic_hive_friendly_giant2_desc: "$civic_hive_friendly_giant2_desc$"
  #effect
- civic_tooltip_friendly_giant_effects: "§GCan be removed after the §Ythird§G colony§W$NEW_LINE$Bonuses:$TABBED_NEW_LINE$- £happiness£ $MOD_POP_HAPPINESS$: §G+10%§W for £time£§G5§W Years after every colonization$TABBED_NEW_LINE$- £colony_ship£ Colony Ship costs reduced by §G-25%§W$TABBED_NEW_LINE$- £influence£ Influence cost for Outposts reduced by §G-10%§W$NEW_LINE$§G£time£ 30 Year bonus with $origin_friendly_giant$ Origin.§!$NEW_LINE$§RThis is a high risk combo, since you wont have guranteed colonies around you\n\n§YGuranteed habitable worlds are replaced.§!"
+ civic_tooltip_friendly_giant_effects: "§GCan be removed after the §Ythird§G colony§W$NEW_LINE$Bonuses:$TABBED_NEW_LINE$- £happiness£ $MOD_POP_HAPPINESS$: §G+10%§W for £time£§G5§W Years after every colonization$TABBED_NEW_LINE$- £colony_ship£ Colony Ship costs reduced by §G-25%§W$TABBED_NEW_LINE$- £influence£ Influence cost for Outposts reduced by §G-10%§W$NEW_LINE$§G£time£ 30 Year bonus with $origin_friendly_giant$ Origin.§!$NEW_LINE$§RTaking Both Civic and Origin is a risky combo, since you wont have guranteed colonies around you.§!\n\n§YGuranteed habitable worlds are replaced.§!"
 
 #Events
  afg_events.02.name: "$origin_friendly_giant$"
