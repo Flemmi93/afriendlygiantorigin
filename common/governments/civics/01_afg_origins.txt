@@ -32,7 +32,7 @@ origin_friendly_giant = {
 	}
 
 	random_weight = {
-		base = 100
+		base = 5
 	}
 	description = "origin_tooltip_friendly_giant_effects"
 }
@@ -91,8 +91,27 @@ civic_friendly_giant = {
 		country_starbase_influence_cost_mult = -0.1
 	}
 	hide_modifiers = yes
-	random_weight = {
-		base = 100
+	random_weight = { base = @civic_default_random_weight }
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				num_pops > 50
+				num_starbases > 5
+				years_passed > 30
+				controlled_colonizable < 4
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				num_pops > 150
+				num_starbases > 10
+				years_passed > 100
+				controlled_colonizable < 1
+			}
+		}
 	}
 	description = "civic_tooltip_friendly_giant_effects"
 }
@@ -147,8 +166,27 @@ civic_machine_friendly_giant = {
 		country_starbase_influence_cost_mult = -0.1
 	}
 	hide_modifiers = yes
-	random_weight = {
-		base = 100
+	random_weight = { base = @civic_default_random_weight }
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				num_pops > 50
+				num_starbases > 5
+				years_passed > 30
+				controlled_colonizable < 4
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				num_pops > 150
+				num_starbases > 10
+				years_passed > 100
+				controlled_colonizable < 1
+			}
+		}
 	}
 	description = "civic_tooltip_friendly_giant_effects"
 
@@ -209,8 +247,27 @@ civic_corpo_friendly_giant = {
 		country_starbase_influence_cost_mult = -0.1
 	}
 	hide_modifiers = yes
-	random_weight = {
-		base = 100
+	random_weight = { base = @civic_default_random_weight }
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				num_pops > 50
+				num_starbases > 5
+				years_passed > 30
+				controlled_colonizable < 4
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				num_pops > 150
+				num_starbases > 10
+				years_passed > 100
+				controlled_colonizable < 1
+			}
+		}
 	}
 	description = "civic_tooltip_friendly_giant_effects"
 
@@ -266,8 +323,27 @@ civic_hive_friendly_giant = {
 		country_starbase_influence_cost_mult = -0.1
 	}
 	hide_modifiers = yes
-	random_weight = {
-		base = 100
+	random_weight = { base = @civic_default_random_weight }
+	ai_weight = {
+		base = @ai_civic_default_base_weight
+		modifier = {
+			factor = @ai_civic_personality_mismatch_factor
+			OR = {
+				num_pops > 50
+				num_starbases > 5
+				years_passed > 30
+				controlled_colonizable < 4
+			}
+		}
+		modifier = {
+			factor = @ai_civic_personality_forbid_factor
+			OR = {
+				num_pops > 150
+				num_starbases > 10
+				years_passed > 100
+				controlled_colonizable < 1
+			}
+		}
 	}
 	description = "civic_tooltip_friendly_giant_effects"
 
