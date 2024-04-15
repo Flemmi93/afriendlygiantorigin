@@ -1,41 +1,33 @@
 ﻿l_german:
-#Origin
- origin_friendly_giant: "A Friendly Giant"
- origin_friendly_giant_desc: "After discovering a second habitable world the people went crazy for it, spending their homeworld in an atempt to settle this new paradise. Despite the relentless pursuit to colonize this §GFriendly Giant§! the Homeworld was not devastated as much as feared by some pesimists."
- friendly_giant_init: "System of Giants"
- friendly_giant_init_NAME: "System of Giants"
+#Herkunft
+ origin_friendly_giant: "Ein freundlicher Riese"
+ origin_friendly_giant_desc: "Nach der Entdeckung einer zweiten bewohnbaren Welt gerieten die Menschen außer sich und opferten ihre Heimatwelt, um dieses neue Paradies zu besiedeln. Trotz des unerbittlichen Drangs, diesen §GFreundlichen Riesen§! zu kolonisieren, wurde die Heimatwelt nicht so stark verwüstet, wie es von einigen Pessimisten befürchtet wurde."
+ friendly_giant_init: "System der Riesen"
+ friendly_giant_init_NAME: "System der Riesen"
  friendly_giant_init_DESC: "$origin_tooltip_friendly_giant_effects$"
- origin_tooltip_friendly_giant_effects: "- $INITIAL_POPS$ §G+1§!$NEW_LINE$- $HOMEWORLD$$TABBED_NEW_LINE$ - reduced in £planetsize£Size$TABBED_NEW_LINE$- §Y10§! £pops£Pops, §Y~5§! £district£Districts and §Y1-2§! £building£Buildings moved to an in system colony$NEW_LINE$Both Planets have additional £blocker£Blockers$NEW_LINE$- The Friendly Giant$TABBED_NEW_LINE$ - Is a £planetsize£very large developed colony within your home system$NEW_LINE$§RNo guranteed habitable worlds§!$NEW_LINE$§GInitial increased $MOD_POP_GROWTH_SPEED$§!$NEW_LINE$§G£time£ 30 Year bonus with $civic_friendly_giant$ Civic.§!$NEW_LINE$§RTaking Both Civic and Origin is a risky combo, since you wont have guranteed colonies around you.§!"
+ origin_tooltip_friendly_giant_effects: "- $INITIAL_POPS$ §G+1§!$NEW_LINE$- $HOMEWORLD$$TABBED_NEW_LINE$ - reduziert in £planetsize£Größe$TABBED_NEW_LINE$- §Y10§! £pops£Bevölkerung, §Y~5§! £district£Distrikte und §Y1-2§! £building£Gebäude wurden in eine Kolonie im System verlegt$NEW_LINE$Beide Planeten haben zusätzliche £blocker£Blocker$NEW_LINE$- Der freundliche Riese$TABBED_NEW_LINE$ - Ist eine £planetsize£sehr groß entwickelte Kolonie innerhalb des Heimatsystems$NEW_LINE$§RKeine garantierten bewohnbaren Welten§!$NEW_LINE$§GErhöhte anfängliche $MOD_POP_GROWTH_SPEED$§!$NEW_LINE$§G£time£ 30 Jahre Bonus mit $civic_friendly_giant$ Staatselement.§!$NEW_LINE$§RBeide Staatselemente und Herkunft zu nehmen ist eine riskante Kombination, da Sie keine garantierten Kolonien in Ihrer Nähe haben.§!"
  friendly_giant_init_civic: "$friendly_giant_init$"
  friendly_giant_init_civic_NAME: "$friendly_giant_init_NAME$"
  friendly_giant_init_civic_DESC: "$origin_tooltip_friendly_giant_effects$"
 
-#Civic
+#Staatselement
  civic_friendly_giant: "$origin_friendly_giant$"
- civic_friendly_giant_desc: "$origin_friendly_giant$"
- civic_corpo_friendly_giant: "Huge Investment Opportunity"
- civic_corpo_friendly_giant_desc: "Huge Investment Opportunity"
- civic_machine_friendly_giant: "Huge External Expansion"
- civic_machine_friendly_giant_desc: "Huge External Expansion"
+ civic_friendly_giant_desc: "$origin_friendly_giant_desc$"
+ civic_corpo_friendly_giant: "Eine riesige Investitionsmöglichkeit"
+ civic_corpo_friendly_giant_desc: "$origin_friendly_giant_desc$"
+ civic_machine_friendly_giant: "Eine riesige externe Erweiterung"
+ civic_machine_friendly_giant_desc: "Nachdem Daten die Existenz von vorteilhaften Bedingungen auf dem fernen Mond bestätigt hatten, führten Berechnungen zu einer sofortigen Priorisirung des Ausbau der Infrastruktur auf dieser neuen Welt. Eine Menge Ressourcen des Heimknotens wurden für den Aufbau dieses neuen Systems aufgewendet."
  civic_hive_friendly_giant: "$origin_friendly_giant$"
- civic_hive_friendly_giant_desc: "$origin_friendly_giant$"
- #2nd stage (removeable)
- civic_friendly_giant2: "$civic_friendly_giant$"
- civic_friendly_giant2_desc: "$civic_friendly_giant_desc$"
- civic_corpo_friendly_giant2: "$civic_friendly_giant$"
- civic_corpo_friendly_giant2_desc: "$civic_corpo_friendly_giant_desc$"
- civic_machine_friendly_giant2: "$civic_machine_friendly_giant$"
- civic_machine_friendly_giant2_desc: "$civic_machine_friendly_giant_desc$"
- civic_hive_friendly_giant2: "$civic_hive_friendly_giant$"
- civic_hive_friendly_giant2_desc: "$civic_hive_friendly_giant2_desc$"
- #effect
- civic_tooltip_friendly_giant_effects: "§GCan be removed after the §Ythird§G colony§W$NEW_LINE$Bonuses:$TABBED_NEW_LINE$- £happiness£ $MOD_POP_HAPPINESS$: §G+10%§W for £time£§G5§W Years after every colonization$TABBED_NEW_LINE$- £colony_ship£ Colony Ship costs reduced by §G-25%§W$TABBED_NEW_LINE$- £influence£ Influence cost for Outposts reduced by §G-10%§W$NEW_LINE$§G£time£ 30 Year bonus with $origin_friendly_giant$ Origin.§!$NEW_LINE$§RTaking Both Civic and Origin is a risky combo, since you wont have guranteed colonies around you.§!\n\n§YGuranteed habitable worlds are replaced.§!"
+ civic_hive_friendly_giant_desc: "Nach der Entdeckung der verborgenen Welt war die Verzweiflung groß, denn viele Zeitalter lang wurden uns die Ressourcen dieser Welt zufällig vorenthalten. Nun wurden viele Ressourcen des Geburtsplaneten aufgewendet und bedeutende Infrastruktur auf dem fernen Mond errichtet."
 
-#Events
+ #Effekt
+ civic_tooltip_friendly_giant_effects: "§GKann nach der §Ydritten§G Kolonie entfernt werden§W$NEW_LINE$Boni: $TABBED_NEW_LINE$- £happiness£ $MOD_POP_HAPPINESS$: §G+10%§W für £time£§G5§W Jahre nach jeder Kolonisierung$TABBED_NEW_LINE$- £colony_ship£ Kolonieschiffkosten um §G-25%§W reduziert$TABBED_NEW_LINE$- £influence£ Einflusskosten für Außenposten um §G-10%§W reduziert$NEW_LINE$§G£time£ 30 Jahre Bonus mit $origin_friendly_giant$ Herkunft.§!$NEW_LINE$§RBeide Staatselemente und Herkunft zu nehmen ist eine riskante Kombination, da Sie keine garantierten Kolonien in Ihrer Nähe haben.§!\n\n§YGarantierte bewohnbare Welten werden ersetzt.§!"
+
+#Ereignisse
  afg_events.02.name: "$origin_friendly_giant$"
- afg_events.02.desc: "In our solar system there is the moon §G[This.GetName]§! behind a gas giant. it was long hidden due to complex oribtal mechanics, now with interplanetary ships flying around we have spotted it and immediatly colonized this home away from home.\n\nLiving on §G[This.GetName]§! is easy and popular and vast amounts of our poeple have move permanently there."
+ afg_events.02.desc: "In unserem Sonnensystem gibt es den Mond §G[This.GetName]§! hinter einem Gasriesen. Lange Zeit war er aufgrund komplexer orbitaler Mechanismen verborgen, doch jetzt haben wir ihn mit interplanetaren Schiffen gesichtet und sofort dieses Zuhause fernab der Heimat kolonisiert.\n\nDas Leben auf §G[This.GetName]§! ist einfach und beliebt, und große Teile unseres Volkes sind dauerhaft dorthin gezogen."
 
-#Modifiers
+#Modifikatoren
  afg_demotion: ""
  afg_happiness: "$colonization_fever$"
  afg_happiness_desc: "$colonization_fever_desc$"

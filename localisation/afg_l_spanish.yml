@@ -1,7 +1,7 @@
 ﻿l_english:
 #Origin
  origin_friendly_giant: "A Friendly Giant"
- origin_friendly_giant_desc: "After discovering a second habitable world the people went crazy for it, spending their homeworld in an atempt to settle this new paradise. Despite the relentless pursuit to colonize this §GFriendly Giant§! the Homeworld was not devastated as much as feared by some pesimists."
+ origin_friendly_giant_desc: "After discovering a second habitable world the people went crazy for it, spending their homeworld in an attempt to settle this new paradise. Despite the relentless pursuit to colonize this §GFriendly Giant§! the Homeworld was not devastated as much as feared by some pessimists."
  friendly_giant_init: "System of Giants"
  friendly_giant_init_NAME: "System of Giants"
  friendly_giant_init_DESC: "$origin_tooltip_friendly_giant_effects$"
@@ -12,28 +12,20 @@
 
 #Civic
  civic_friendly_giant: "$origin_friendly_giant$"
- civic_friendly_giant_desc: "$origin_friendly_giant$"
- civic_corpo_friendly_giant: "Huge Investment Opportunity"
- civic_corpo_friendly_giant_desc: "Huge Investment Opportunity"
- civic_machine_friendly_giant: "Huge External Expansion"
- civic_machine_friendly_giant_desc: "Huge External Expansion"
+ civic_friendly_giant_desc: "$origin_friendly_giant_desc$"
+ civic_corpo_friendly_giant: "A Huge Investment Opportunity"
+ civic_corpo_friendly_giant_desc: "$origin_friendly_giant_desc$"
+ civic_machine_friendly_giant: "A Huge External Expansion"
+ civic_machine_friendly_giant_desc: "Once data confirmed the existence of advantages conditions on the distant Moon calculations have resulted in an immediate demand to expand infrastructure out to this new world. A lot of resources of the home node were expanded in the effort to establish this new system."
  civic_hive_friendly_giant: "$origin_friendly_giant$"
- civic_hive_friendly_giant_desc: "$origin_friendly_giant$"
- #2nd stage (removeable)
- civic_friendly_giant2: "$civic_friendly_giant$"
- civic_friendly_giant2_desc: "$civic_friendly_giant_desc$"
- civic_corpo_friendly_giant2: "$civic_friendly_giant$"
- civic_corpo_friendly_giant2_desc: "$civic_corpo_friendly_giant_desc$"
- civic_machine_friendly_giant2: "$civic_machine_friendly_giant$"
- civic_machine_friendly_giant2_desc: "$civic_machine_friendly_giant_desc$"
- civic_hive_friendly_giant2: "$civic_hive_friendly_giant$"
- civic_hive_friendly_giant2_desc: "$civic_hive_friendly_giant2_desc$"
+ civic_hive_friendly_giant_desc: "After discovering the hidden world despair was great, for many ages the resources of this world were withheld from us by chance. Now many resources of the birth planet were expanded and significant infrastructure was established on the distant moon."
+
  #effect
- civic_tooltip_friendly_giant_effects: "§GCan be removed after the §Ythird§G colony§W$NEW_LINE$Bonuses:$TABBED_NEW_LINE$- £happiness£ $MOD_POP_HAPPINESS$: §G+10%§W for £time£§G5§W Years after every colonization$TABBED_NEW_LINE$- £colony_ship£ Colony Ship costs reduced by §G-25%§W$TABBED_NEW_LINE$- £influence£ Influence cost for Outposts reduced by §G-10%§W$NEW_LINE$§G£time£ 30 Year bonus with $origin_friendly_giant$ Origin.§!$NEW_LINE$§RTaking Both Civic and Origin is a risky combo, since you wont have guranteed colonies around you.§!\n\n§YGuranteed habitable worlds are replaced.§!"
+ civic_tooltip_friendly_giant_effects: "§GCan be removed after the §Ythird§G colony§W$NEW_LINE$Bonuses:$TABBED_NEW_LINE$- £happiness£ $MOD_POP_HAPPINESS$: §G+10%§W for £time£§G5§W Years after every colonization$TABBED_NEW_LINE$- £colony_ship£ Colony Ship costs reduced by §G-25%§W$TABBED_NEW_LINE$- £influence£ Influence cost for Outposts reduced by §G-10%§W$NEW_LINE$§G£time£ 30 Year bonus with $origin_friendly_giant$ Origin.§!$NEW_LINE$§RTaking Both Civic and Origin is a risky combo, since you won't have guaranteed colonies around you.§!\n\n§YGuranteed habitable worlds are replaced.§!"
 
 #Events
  afg_events.02.name: "$origin_friendly_giant$"
- afg_events.02.desc: "In our solar system there is the moon §G[This.GetName]§! behind a gas giant. it was long hidden due to complex oribtal mechanics, now with interplanetary ships flying around we have spotted it and immediatly colonized this home away from home.\n\nLiving on §G[This.GetName]§! is easy and popular and vast amounts of our poeple have move permanently there."
+ afg_events.02.desc: "In our solar system there is the moon §G[This.GetName]§! behind a gas giant. It was long hidden due to complex orbital mechanics, now with interplanetary ships flying around we have spotted it and immediately colonized this home away from home.\n\nLiving on §G[This.GetName]§! is easy and popular and vast amounts of our people have moved permanently there."
 
 #Modifiers
  afg_demotion: ""
