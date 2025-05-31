@@ -141,7 +141,7 @@ planet_event = {
 				add_district = district_industrial
 				while = {
 					count = 2
-					owner.capital_scope= {
+					owner.capital_scope = {
 						random_owned_pop = {
 							limit = { NOT = { has_trait = trait_zombie } }
 							resettle_pop = {
@@ -207,7 +207,7 @@ planet_event = {
 			if = {
 				limit = {
 					owner.capital_scope = { has_building = building_machine_assembly_plant }
-					NOT = { has_building= building_machine_assembly_plant }
+					NOT = { has_building = building_machine_assembly_plant }
 				}
 				add_building = building_machine_assembly_plant
 			}
