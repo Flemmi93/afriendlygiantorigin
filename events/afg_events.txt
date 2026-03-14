@@ -30,7 +30,7 @@ country_event = {
 
 			while = {
 				count = 10
-				random_owned_pop = {
+				random_owned_pop_group = {
 					limit = { NOT = { has_trait = trait_zombie } }
 					resettle_pop = {
 						pop = THIS
@@ -38,7 +38,7 @@ country_event = {
 					}
 				}
 			}
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = { NOT = { has_trait = trait_zombie } }
 				resettle_pop = {
 					pop = THIS
@@ -46,8 +46,8 @@ country_event = {
 				}
 			}
 			if = {
-				limit = { any_owned_pop = { has_trait = trait_zombie } }
-				random_owned_pop = {
+				limit = { any_owned_pop_group = { has_trait = trait_zombie } }
+				random_owned_pop_group = {
 					limit = { has_trait = trait_zombie }
 					resettle_pop = {
 						pop = THIS
@@ -55,7 +55,7 @@ country_event = {
 					}
 				}
 				event_target:friendly_giant_colony_target = {
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = { NOT = { has_trait = trait_zombie } }
 						resettle_pop = {
 							pop = THIS
@@ -133,16 +133,16 @@ planet_event = {
 				limit = {
 					owner.capital_scope = {
 						num_districts = {
-							type = district_industrial
+							type = district_generator
 							value > 2
 						}
 					}
 				}
-				add_district = district_industrial
+				add_district = district_generator
 				while = {
 					count = 2
 					owner.capital_scope = {
-						random_owned_pop = {
+						random_owned_pop_group = {
 							limit = { NOT = { has_trait = trait_zombie } }
 							resettle_pop = {
 								pop = THIS
@@ -151,7 +151,7 @@ planet_event = {
 						}
 					}
 				}
-				owner.capital_scope = { remove_district = district_industrial }
+				owner.capital_scope = { remove_district = district_generator }
 			}
 			#Move Generator
 
@@ -184,10 +184,10 @@ planet_event = {
 				owner.capital_scope = { remove_building = building_temple }
 				add_building = building_temple
 			}
-			if = {
-				limit = { owner.capital_scope = { has_building = building_clinic } }
-				add_building = building_clinic
-			}
+			# if = {
+			# 	limit = { owner.capital_scope = { has_building = building_clinic } }
+			# 	add_building = building_clinic
+			# }
 			if = {
 				limit = { owner.capital_scope = { has_building = building_spawning_pool } }
 				add_building = building_spawning_pool

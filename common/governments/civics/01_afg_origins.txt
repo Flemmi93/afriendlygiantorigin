@@ -42,7 +42,7 @@ civic_friendly_giant = {
 			always = no
 		}
 		remove = {
-			count_controlled_planet = {
+			count_owned_planet = {
 				count > 3
 				limit = { is_colony = yes }
 			}
@@ -97,7 +97,7 @@ civic_friendly_giant = {
 		modifier = {
 			factor = @ai_civic_personality_mismatch_factor
 			OR = {
-				num_pops > 50
+				# num_pops > 50
 				num_starbases > 5
 				years_passed > 30
 				controlled_colonizable < 4
@@ -106,7 +106,7 @@ civic_friendly_giant = {
 		modifier = {
 			factor = @ai_civic_personality_forbid_factor
 			OR = {
-				num_pops > 150
+				# num_pops > 150
 				num_starbases > 10
 				years_passed > 100
 				controlled_colonizable < 1
@@ -121,7 +121,7 @@ civic_machine_friendly_giant = {
 			always = no
 		}
 		remove = {
-			count_controlled_planet = {
+			count_owned_planet = {
 				count > 3
 				limit = { is_colony = yes }
 			}
@@ -172,7 +172,7 @@ civic_machine_friendly_giant = {
 		modifier = {
 			factor = @ai_civic_personality_mismatch_factor
 			OR = {
-				num_pops > 50
+				# num_pops > 50
 				num_starbases > 5
 				years_passed > 30
 				controlled_colonizable < 4
@@ -181,7 +181,7 @@ civic_machine_friendly_giant = {
 		modifier = {
 			factor = @ai_civic_personality_forbid_factor
 			OR = {
-				num_pops > 150
+				# num_pops > 150
 				num_starbases > 10
 				years_passed > 100
 				controlled_colonizable < 1
@@ -197,7 +197,7 @@ civic_corpo_friendly_giant = {
 			always = no
 		}
 		remove = {
-			count_controlled_planet = {
+			count_owned_planet = {
 				count > 3
 				limit = { is_colony = yes }
 			}
@@ -253,7 +253,7 @@ civic_corpo_friendly_giant = {
 		modifier = {
 			factor = @ai_civic_personality_mismatch_factor
 			OR = {
-				num_pops > 50
+				# num_pops > 50
 				num_starbases > 5
 				years_passed > 30
 				controlled_colonizable < 4
@@ -262,7 +262,7 @@ civic_corpo_friendly_giant = {
 		modifier = {
 			factor = @ai_civic_personality_forbid_factor
 			OR = {
-				num_pops > 150
+				# num_pops > 150
 				num_starbases > 10
 				years_passed > 100
 				controlled_colonizable < 1
@@ -278,7 +278,7 @@ civic_hive_friendly_giant = {
 			always = no
 		}
 		remove = {
-			count_controlled_planet = {
+			count_owned_planet = {
 				count > 3
 				limit = { is_colony = yes }
 			}
@@ -329,7 +329,7 @@ civic_hive_friendly_giant = {
 		modifier = {
 			factor = @ai_civic_personality_mismatch_factor
 			OR = {
-				num_pops > 50
+				# num_pops > 50
 				num_starbases > 5
 				years_passed > 30
 				controlled_colonizable < 4
@@ -338,7 +338,7 @@ civic_hive_friendly_giant = {
 		modifier = {
 			factor = @ai_civic_personality_forbid_factor
 			OR = {
-				num_pops > 150
+				# num_pops > 150
 				num_starbases > 10
 				years_passed > 100
 				controlled_colonizable < 1
